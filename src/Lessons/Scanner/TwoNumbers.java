@@ -1,5 +1,8 @@
 package Lessons.Scanner;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class TwoNumbers {
 
     public static void main(String[] args) {
