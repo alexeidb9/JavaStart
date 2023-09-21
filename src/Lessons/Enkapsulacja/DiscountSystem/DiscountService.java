@@ -1,4 +1,4 @@
-package Lessons.Enkapsulacja;
+package Lessons.Enkapsulacja.DiscountSystem;
 
 public class DiscountService {
     public double calculateDiscountPrice(Client client, double price) {
