@@ -1,16 +1,16 @@
-package Lessons.Enkapsulacja.Cinema;
+package Lessons.DiscountApp;
 
-public class Viewer {
+public class Client {
+
     private String firstName;
     private String lastName;
-    private int age;
+    private boolean premium;
 
-    public Viewer(String firstName, String lastName, int age) {
+    public Client(String firstName, String lastName, boolean premium) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.premium = premium;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -28,11 +28,13 @@ public class Viewer {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
+    public boolean isPremium() {
+        return premium;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPremium(boolean premium) {
+        this.premium = premium;
     }
+
+
 }

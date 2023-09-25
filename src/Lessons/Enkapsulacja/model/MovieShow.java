@@ -1,6 +1,6 @@
-package Lessons.Enkapsulacja.Cinema;
+package Lessons.Enkapsulacja.model;
 
-public class MovieSession {
+public class MovieShow {
 
     private String movieTitle;
     private String movieType;
@@ -9,7 +9,7 @@ public class MovieSession {
     private int maxSeats;
     private int freeSeats;
 
-    public MovieSession(String movieTitle, String movieType, int movieTime, int ageRequired, int maxSeats, int freeSeats) {
+    public MovieShow(String movieTitle, String movieType, int movieTime, int ageRequired, int maxSeats, int freeSeats) {
         this.movieTitle = movieTitle;
         this.movieType = movieType;
         this.movieTime = movieTime;
@@ -66,4 +66,18 @@ public class MovieSession {
     public void setFreeSeats(int freeSeats) {
         this.freeSeats = freeSeats;
     }
+
+    public boolean hasFreeSeats () {
+        return freeSeats !=0;
+    }
+
+    String getMovieInfo () {
+        return movieTitle + " - " + movieType + " - " + movieTime + " min";
+    }
+
+    public void decreaseFreeSeatsNumberByOne() {
+        freeSeats--;
+    }
+
+
 }
