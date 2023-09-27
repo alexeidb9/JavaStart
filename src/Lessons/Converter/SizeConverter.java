@@ -1,4 +1,4 @@
-package Lessons.Calculator;
+package Lessons.Converter;
 
 public class SizeConverter {
 

@@ -1,39 +1,36 @@
 package Lessons.Calculator;
 
+import java.util.Objects;
+
 public class Calculator {
 
-    double add(double a, double b) {
 
-        return a + b;
+    public double calculate(double a, double b, String operator) {
+        switch (operator.toLowerCase()) {
+            case "add":
+            case "+":
+                return a + b;
 
+            case "subtract":
+            case "-":
+                return a - b;
+
+            case "divide":
+            case "/":
+                if (b == 0) {
+                    throw new IllegalArgumentException("Division by zero is not allowed.");
+                }
+                return a / b;
+
+            case "multiply":
+            case "*":
+                return a * b;
+            default:
+                throw new IllegalArgumentException("Invalid operator: " + operator);
+        }
     }
 
-    double add(double a, double b, double c) {
 
-        return add(a, b) + c;
-
-    }
-
-    double subtract(double a, double b) {
-        return a - b;
-    }
-
-    double subtract(double a, double b, double c) {
-        return subtract(a, b) - c;
-    }
-
-
-    double divide(double a, double b) {
-
-        return a / b;
-
-    }
-
-    double multiply(double a, double b) {
-
-        return a * b;
-
-    }
 
 
 }
