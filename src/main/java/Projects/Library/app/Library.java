@@ -1,23 +1,27 @@
 package Projects.Library.app;
 
+import Projects.Library.io.DataReader;
 import Projects.Library.model.Book;
+
+import java.util.Scanner;
 
 public class Library {
     public static void main(String[] args) {
-        final String appName = "Library v0.7";
+        final String appName = "Library v0.8";
 
-        Book[] book = new Book[1000];
+        DataReader dr = new DataReader();
 
+        Book[] books = new Book[1000];
 
-        book[0] = new Book("Hustle Harder","50 cent", 2021, 205, "Pinguin", "12345667889");
-        book[1] = new Book("Letting Go", "David Hawkins", 1998, 225, "Pinguin", "12345667889");
-        book[2] = new Book("SCJP Sun Certified Programmer for Java 6 Study Guide", "Bert Bates, Katherine Sierra",
-                2008, 851, "McGraw-Hill Osborne Media");
+        books[0] = dr.readAndCreateBook();
+        books[1] = dr.readAndCreateBook();
+        dr.close();
+
 
         System.out.println(appName);
         System.out.println("Books available in the library: ");
-        book[0].printInfo();
-        book[2].printInfo();
+        books[0].printInfo();
+        books[1].printInfo();
 
 
     }
