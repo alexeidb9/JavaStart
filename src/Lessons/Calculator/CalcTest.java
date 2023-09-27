@@ -4,15 +4,10 @@ public class CalcTest {
 
     public static void main(String[] args) {
 
-        String app = "Calculator v0.2";
+        String app = "Calculator v0.3";
 
         Calculator calculator = new Calculator();
-
-        double a = 30;
-        double b = 20;
-        double c = 10;
-
-        System.out.println(calculator.calculate(a,b,"+"));
+        System.out.println(calculator.calculate("+", 1,2,3,4,5));
 
     }
 
