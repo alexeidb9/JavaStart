@@ -1,7 +1,11 @@
 package Lessons.Calculator;
 
 
+import java.util.Scanner;
+
 public class Calculator {
+
+
     public double calculate(String operator, double... numbers) {
 
         if (numbers.length < 2) {
