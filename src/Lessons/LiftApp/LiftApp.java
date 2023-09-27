@@ -2,6 +2,9 @@ package Lessons.LiftApp;
 
 public class LiftApp {
     public static void main(String[] args) {
+
+        final String appName = "Elevator v0.1";
+
     Person person1 = new Person(11,65);
     Person person2 = new Person(31,105);
     Person person3 = new Person(24,78);
