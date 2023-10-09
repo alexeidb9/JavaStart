@@ -2,33 +2,31 @@ package Tasks.Hospital;
 
 import java.util.Scanner;
 
+
 public class Hospital {
 
-    final private Patient[] patients = new Patient[2];
-    private int numberOfPatients = 0;
+    final private int maxPatientsNumber = 10;
+    private Patient[] patients = new Patient[maxPatientsNumber];
+    private int regPatients = 0;
 
-    Patient[] addToQueue (Patient p) {
+    void addPatient(Patient patient) {
 
-        if (numberOfPatients == patients.length) {
-            System.out.println("The queue is full.");
-        } else if (numberOfPatients < patients.length) {
-            patients[numberOfPatients] = p;
-            numberOfPatients++;
+        if (regPatients < maxPatientsNumber) {
+            patients[regPatients] = patient;
+            regPatients++;
+        } else {
+            System.out.println("Limit is reached for today.");
         }
-        return patients;
+
+
+    }
+
+    void printPatients() {
+        for (int i = 0; i < regPatients; i++) {
+            patients[i].getInfo();
         }
 
-
-
-    void printList () {
+        }
 
     }
 
-    public Patient[] getPatients() {
-        return patients;
-    }
-
-    public int getNumberOfPatients() {
-        return numberOfPatients;
-    }
-}

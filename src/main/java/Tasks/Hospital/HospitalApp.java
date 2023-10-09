@@ -1,29 +1,57 @@
 package Tasks.Hospital;
 
+import java.util.Scanner;
+
 public class HospitalApp {
 
     public static void main(String[] args) {
 
-
-// 0 - wyjście z programu, 1 - dopisanie pacjenta, 2 - wyświetlenie listy zapisanych pacjentów.
-
-//        Ograniczenia:
-//
-// Aplikacja powinna działać do tego momentu, aż użytkownik nie wybierze opcji 0, czyli wyjścia z programu.
-
+        final int exit = 0;
+        final int addPatient = 1;
+        final int printPatients = 2;
+        Scanner input = new Scanner(System.in);
+        int option = -1;
 
         Hospital hospital = new Hospital();
 
-        Patient patient1 = new Patient("Bob", "Yo", 12345);
-        Patient patient2 = new Patient("Bob", "Yo", 12343);
-        Patient patient3 = new Patient("Bob", "Yo", 12343);
+        while (option != exit) {
+            System.out.println("Dostępne opcje: ");
+            System.out.println("0 - wyjście z programu");
+            System.out.println("1 - dodanie pacjenta");
+            System.out.println("2 - wyświetlenie listy pacjentów");
 
-        hospital.addToQueue(patient1);
-        hospital.addToQueue(patient2);
+            System.out.println("Wybierz opcję: ");
+            option = input.nextInt();
+            input.nextLine();
 
-        System.out.println(hospital.getPatients()[0].getLastName());
-        hospital.addToQueue(patient3);
+            switch (option) {
+                case addPatient:
+                    Patient patient = new Patient();
+                    System.out.println("Imię: ");
+                    patient.setFirstName(input.nextLine());
+                    System.out.println("Nazwisko: ");
+                    patient.setLastName(input.nextLine());
+                    System.out.println("PESEL: ");
+                    patient.setPesel(input.nextInt());
+                    hospital.addPatient(patient);
+                    break;
+                case printPatients:
+                    hospital.printPatients();
+                    break;
+                case exit:
+                    System.out.println("Zamykam program!");
+                    break;
+                default:
+                    System.out.println("Nie znaleziono takiej opcji");
+            }
+        }
+
+        input.close();
+    }
+
+
+
 
 
     }
-}
+

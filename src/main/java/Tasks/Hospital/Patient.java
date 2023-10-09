@@ -2,23 +2,26 @@ package Tasks.Hospital;
 
 public class Patient {
 
-    private String name;
+    private String firstName;
     private String lastName;
     private int pesel;
 
-    public Patient(String name, String lastName, int pesel) {
-        this.name = name;
+    public Patient() {
+    }
+
+    public Patient(String firstName, String lastName, int pesel) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.pesel = pesel;
     }
 
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -36,4 +39,11 @@ public class Patient {
     public void setPesel(int pesel) {
         this.pesel = pesel;
     }
+
+    public void getInfo () {
+        System.out.println(getFirstName() + " "
+                + getLastName() + " "
+                + getPesel());
+    }
+
 }
