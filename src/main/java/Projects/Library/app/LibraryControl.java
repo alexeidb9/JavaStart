@@ -4,14 +4,13 @@ import Projects.Library.io.DataReader;
 import Projects.Library.model.Book;
 import Projects.Library.model.Library;
 
-import static java.lang.System.exit;
-
 public class LibraryControl {
 
 
-    private final int exit = 0;
-    private final int addBook = 1;
-    private final int printBooks = 2;
+    private static final int EXIT = 0;
+    private static final int ADD_BOOK = 1;
+    private static final int PRINT_BOOKS = 2;
+
     private DataReader dataReader = new DataReader();
     private Library library = new Library();
 
@@ -23,19 +22,19 @@ public class LibraryControl {
             printOptions();
             option = dataReader.getInt();
             switch (option) {
-                case exit:
+                case EXIT:
                     exit();
                     break;
-                case addBook:
+                case ADD_BOOK:
                     addBook();
                     break;
-                case printBooks:
+                case PRINT_BOOKS:
                     printBooks();
                     break;
                 default:
                     System.out.println("No such option, try again");
             }
-        } while (option != exit);
+        } while (option != EXIT);
     }
 
     private void exit() {
@@ -54,9 +53,9 @@ public class LibraryControl {
 
     private void printOptions() {
         System.out.println("Choose option:");
-        System.out.println(exit + " - exit");
-        System.out.println(addBook + " - add new book");
-        System.out.println(printBooks+ " - display available books");
+        System.out.println(EXIT + " - exit");
+        System.out.println(ADD_BOOK + " - add new book");
+        System.out.println(PRINT_BOOKS + " - display available books");
 
 
     }
