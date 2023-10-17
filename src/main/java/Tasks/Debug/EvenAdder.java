@@ -39,11 +39,7 @@ public class EvenAdder {
      * @return true if number is even, or false otherwise
      */
     private static boolean isEven(int number) {
-        if (number % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return number % 2 == 0;
     }
 
     /**
