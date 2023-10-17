@@ -1,8 +1,6 @@
-TODO:
+V1.1
 
-- Implement search
-- Web version
-
+- Magazines support
 
 v0.8
 - Book input
