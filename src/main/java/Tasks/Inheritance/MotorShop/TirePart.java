@@ -1,4 +1,4 @@
-package Tasks.Inheritance;
+package Tasks.Inheritance.MotorShop;
 
 public class TirePart extends Part{
 
