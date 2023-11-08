@@ -15,6 +15,7 @@ public class Book extends Publication{
 
     }
 
+    @Override
     public void printInfo () {
         String info = getTitle() + "; " + author + "; " + getYear()
                 + "; " + pages + "; " + getPublisher();
