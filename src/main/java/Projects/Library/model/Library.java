@@ -21,7 +21,7 @@ public class Library {
         int countBooks = 0;
         for (int i = 0; i < publicationsNumber; i++) {
         if(publications[i] instanceof Book) {
-            publications[i].printInfo();
+            System.out.println(publications[i].toString());
             countBooks++;
             }
         }
@@ -45,10 +45,9 @@ public class Library {
         int countMagazines = 0;
         for (int i = 0; i < publicationsNumber; i++) {
             if(publications[i] instanceof Magazine) {
-                publications[i].printInfo();
+                System.out.println(publications[i].toString());
                 countMagazines++;
             }
-            publications[i].printInfo();
         }
         if(countMagazines == 0) {
             System.out.println("There are no magazines in a library.");
