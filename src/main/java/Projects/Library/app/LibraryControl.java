@@ -7,23 +7,16 @@ import Projects.Library.model.Magazine;
 
 public class LibraryControl {
 
-
-    private static final int EXIT = 0;
-    private static final int ADD_BOOK = 1;
-    private static final int ADD_MAGAZINE = 2;
-    private static final int PRINT_BOOKS = 3;
-    private static final int PRINT_MAGAZINES = 4;
-
     private DataReader dataReader = new DataReader();
     private Library library = new Library();
 
 
     public void controlLoop () {
-        int option = 0;
+        Option option;
 
         do {
             printOptions();
-            option = dataReader.getInt();
+            option = Option.createFromInt(dataReader.getInt());
             switch (option) {
                 case EXIT:
                     exit();
@@ -43,7 +36,7 @@ public class LibraryControl {
                 default:
                     System.out.println("No such option, try again");
             }
-        } while (option != EXIT);
+        } while (option != Option.EXIT);
     }
 
     private void printMagazines() {
@@ -71,11 +64,9 @@ public class LibraryControl {
 
     private void printOptions() {
         System.out.println("Choose option:");
-        System.out.println(EXIT + " - exit");
-        System.out.println(ADD_BOOK + " - add new book");
-        System.out.println(ADD_MAGAZINE + " - add new magazine");
-        System.out.println(PRINT_BOOKS + " - display available books");
-        System.out.println(PRINT_MAGAZINES + " - display available magazines");
+        for (Option value : Option.values()) {
+            System.out.println(value);
+        }
 
 
     }
