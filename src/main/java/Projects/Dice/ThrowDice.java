@@ -1,12 +1,14 @@
 package Projects.Dice;
 
+import java.util.Scanner;
+
 public class ThrowDice {
     public static void main(String[] args) {
-        Dice dice1 = new Dice();
-        Dice dice2 = new Dice(3);
 
-        dice2.roll();
-        dice2.printInfo();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Press Enter to roll the dice");
+        input.nextLine();
+        System.out.println(Dice.roll());
 
     }
 
