@@ -1,7 +1,7 @@
 package Projects.Library.app;
 
 class LibraryApp {
-    private static final String APP_NAME = "Library v1.4";
+    private static final String APP_NAME = "Library v1.5";
 
     public static void main(String[] args) {
 
