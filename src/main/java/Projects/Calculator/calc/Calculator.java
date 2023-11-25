@@ -31,7 +31,6 @@ public class Calculator {
         sc.close();
     }
 
-
     public static double calculate(String operator, double... numbers) throws ArithmeticException, UnknownOperatorException {
 
         if (numbers.length < 2) {
