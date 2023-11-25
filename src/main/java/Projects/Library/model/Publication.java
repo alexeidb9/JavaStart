@@ -2,7 +2,7 @@ package Projects.Library.model;
 
 import java.util.Objects;
 
-public class Publication {
+public abstract class Publication {
 
     private int year;
     private String title;

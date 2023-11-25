@@ -1,6 +1,6 @@
 package Projects.Bank;
 
-import Projects.Auction.Adress;
+import Tasks.Auction.Adress;
 
 public class Bank {
 
@@ -10,7 +10,7 @@ public class Bank {
         person1.firstName = "Jan";
         person1.lastName = "Kowalski";
         person1.pesel = "4124552112";
-        Projects.Auction.Adress adress1 = new Projects.Auction.Adress();
+        Adress adress1 = new Adress();
         adress1.city = "Wroclaw";
         adress1.street = "Hallera";
         adress1.postalCode = "444-22";

@@ -1,6 +1,6 @@
 package Projects.Bank;
 
-import Projects.Auction.Adress;
+import Tasks.Auction.Adress;
 
 public class Person {
 
@@ -8,7 +8,7 @@ public class Person {
     String lastName;
     String pesel;
 
-    Projects.Auction.Adress registeredAdress;
+    Adress registeredAdress;
 
     Adress livingAdress;
 
